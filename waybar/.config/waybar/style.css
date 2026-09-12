@@ -68,6 +68,23 @@ window#waybar {
     background: @love;
 }
 
+#custom-new-workspace {
+    padding: 0 11px;
+    margin: 4px 2px;
+
+    color: @iris;
+    background: transparent;
+
+    border-radius: 7px;
+
+    font-size: 16px;
+}
+
+#custom-new-workspace:hover {
+    color: @text;
+    background: rgba(196, 167, 231, 0.10);
+}
+
 
 /* Clock */
 

@@ -8,30 +8,26 @@
     "margin-right": 8,
 
     "modules-left": [
-        "hyprland/workspaces"
-    ],
-
-    "modules-center": [
-        "clock"
-    ],
-
-    "modules-right": [
-        "pulseaudio",
-        "cpu",
-        "memory",
-        "tray"
+      "hyprland/workspaces",
+      "custom/new-workspace"
     ],
 
     "hyprland/workspaces": {
-        "format": "{name}",
-        "disable-scroll": true,
-        "all-outputs": false
+      "format": "{name}",
+      "disable-scroll": true,
+      "all-outputs": false
     },
 
- "clock": {
-    "format": "{:%a, %b %d   %OI:%M %p}",
-    "tooltip-format": "<tt>{calendar}</tt>"
-},
+    "custom/new-workspace": {
+      "format": "+",
+      "tooltip": false,
+      "on-click": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"emptynm\" })'"
+    },
+
+    "clock": {
+      "format": "{:%a, %b %d   %OI:%M %p}",
+      "tooltip-format": "<tt>{calendar}</tt>"
+    },
 
     "pulseaudio": {
         "format": "{icon}  {volume}%",
