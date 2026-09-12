@@ -265,7 +265,8 @@ hl.bind(mainMod .. " + SHIFT + SPACE", hl.dsp.window.float({ action = "toggle" }
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu), { description = "Application launcher" })
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
-
+-- browser
+hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("zen-browser"), { description = "Launch Zen Browser" })
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))

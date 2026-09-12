@@ -28,10 +28,10 @@
         "all-outputs": false
     },
 
-    "clock": {
-        "format": "{:%a, %b %d   %H:%M}",
-        "tooltip-format": "<tt>{calendar}</tt>"
-    },
+ "clock": {
+    "format": "{:%a, %b %d   %OI:%M %p}",
+    "tooltip-format": "<tt>{calendar}</tt>"
+},
 
     "pulseaudio": {
         "format": "{icon}  {volume}%",
