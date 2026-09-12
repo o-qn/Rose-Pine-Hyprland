@@ -1,0 +1,25 @@
+[general]
+
+# Copy button / Ctrl+C sends the image to the Wayland clipboard
+copy-command = "wl-copy"
+
+# Where normal Save goes
+output-filename = "~/Pictures/Screenshots/Screenshot-%Y-%m-%d_%H-%M-%S.png"
+
+# Copy should NOT secretly save another file
+save-after-copy = false
+
+# Close Satty after copying or saving
+early-exit = ["all"]
+
+# Start without automatically selecting a drawing tool
+initial-tool = "pointer"
+
+# Slightly rounded annotation rectangles
+corner-roundness = 10
+
+# Keep the toolbar visible
+default-hide-toolbars = false
+
+# Helps Satty behave like a floating utility on compositors such as Hyprland
+floating-hack =  false

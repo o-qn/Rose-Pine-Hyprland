@@ -1,0 +1,141 @@
+configuration {
+    modi: "drun";
+    show-icons: true;
+    icon-theme: "Papirus-Dark";
+    font: "FiraCode Nerd Font Mono 12";
+
+    display-drun: "";
+    drun-display-format: "{name}";
+}
+
+* {
+    bg:         #232136ee;
+    bg-alt:     #2a273fff;
+    surface:    #393552ff;
+
+    text:       #e0def4ff;
+    muted:      #908caaff;
+
+    iris:       #c4a7e7ff;
+    rose:       #ea9a97ff;
+
+    background-color: transparent;
+    text-color: @text;
+}
+
+window {
+    width: 700px;
+
+    border: 2px;
+    border-color: @iris;
+    border-radius: 12px;
+
+    background-color: @bg;
+
+    padding: 16px;
+}
+
+mainbox {
+    spacing: 14px;
+    background-color: transparent;
+}
+
+inputbar {
+    background-color: @bg-alt;
+
+    border-radius: 8px;
+
+    padding: 12px 14px;
+    spacing: 10px;
+
+    children: [ prompt, entry ];
+}
+
+prompt {
+    text-color: @iris;
+    background-color: transparent;
+}
+
+entry {
+    background-color: transparent;
+
+    placeholder: "Search applications...";
+    placeholder-color: @muted;
+}
+
+listview {
+    lines: 8;
+    columns: 1;
+
+    spacing: 4px;
+
+    scrollbar: false;
+    fixed-height: false;
+
+    background-color: transparent;
+}
+
+element {
+    padding: 10px 12px;
+    spacing: 14px;
+
+    border: 0px;
+    border-radius: 8px;
+
+    background-color: transparent;
+    text-color: @text;
+}
+
+/* Normal rows */
+element normal.normal {
+    background-color: transparent;
+    text-color: @text;
+}
+
+/* Rofi's alternating rows — explicitly kill that background */
+element alternate.normal {
+    background-color: transparent;
+    text-color: @text;
+}
+
+/* Selected row */
+element selected.normal {
+    background-color: @surface;
+    text-color: @iris;
+}
+
+/* Also prevent active/urgent states from inheriting weird defaults */
+element normal.active,
+element alternate.active {
+    background-color: transparent;
+    text-color: @iris;
+}
+
+element selected.active {
+    background-color: @surface;
+    text-color: @iris;
+}
+
+element normal.urgent,
+element alternate.urgent {
+    background-color: transparent;
+    text-color: @rose;
+}
+
+element selected.urgent {
+    background-color: @surface;
+    text-color: @rose;
+}
+
+element-icon {
+    size: 28px;
+
+    background-color: transparent;
+}
+
+element-text {
+    vertical-align: 0.5;
+
+    background-color: transparent;
+    text-color: inherit;
+}
