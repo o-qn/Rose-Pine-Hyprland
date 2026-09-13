@@ -119,6 +119,15 @@ window#waybar {
     color: @rose;
 }
 
+#language {
+    padding: 0 10px;
+    margin: 0 4px;
+    border-radius: 8px;
+}
+
+#language:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
 
 /* Tray */
 

@@ -235,6 +235,11 @@ hl.gesture({
 	action = "workspace",
 })
 
+hl.config({
+	input = {
+		kb_layout = "us,ara",
+	},
+})
 ---------------------
 ---- KEYBINDINGS ----
 ---------------------
@@ -252,6 +257,9 @@ hl.bind(
 	hl.dsp.exec_cmd([[bash -lc 'grim -t ppm -g "$(slurp)" - | satty --filename -']]),
 	{ description = "Screenshot region" }
 )
+-- ~/.config/hypr/config/binds.lua
+
+hl.bind("SUPER + SPACE", hl.dsp.exec_cmd("hyprctl switchxkblayout current next"))
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))

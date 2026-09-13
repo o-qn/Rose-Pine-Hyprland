@@ -23,6 +23,18 @@
       "tooltip": false,
       "on-click": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"emptynm\" })'"
     },
+      
+    "modules-center": [
+        "clock"
+    ],
+
+    "modules-right": [
+        "pulseaudio",
+        "cpu",
+        "memory",
+        "hyprland/language",
+        "tray"
+    ],
 
     "clock": {
       "format": "{:%a, %b %d   %OI:%M %p}",
@@ -48,6 +60,13 @@
         "format": "  {percentage}%",
         "interval": 5
     },
+    
+    "hyprland/language": {
+    "format": "  {short}",
+    "on-click": "hyprctl switchxkblayout current next",
+    "tooltip": true,
+    "tooltip-format": "Keyboard: {long}"
+},
 
     "tray": {
         "icon-size": 18,
